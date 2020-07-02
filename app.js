@@ -37,8 +37,8 @@ app.get('/add-blog',(req,res) => {
 app.get('/', (req,res) => {
     // res.send('this is home')
     // to redirect to a different route
-    // res.redirect('./blogs') 
-    res.render('index',{title: 'Home'})
+    res.redirect('./blogs') 
+    // res.render('index',{title: 'Home'})
 })
 
 
