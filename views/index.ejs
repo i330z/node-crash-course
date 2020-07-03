@@ -6,15 +6,16 @@
 
     <div class="blogs content">
       <h2>All Blogs</h2>
+      <% if(blogs.length > 0) { %> <% blogs.forEach(blog => { %>
+        <a href="/blogs/<%= blog._id %>" class="single">
+          <h3 class="title"><%= blog.title %></h3>
+          <p>
+            <%= blog.body %>
+          </p>
+        </a>
+  
+      <% }) %> <% } %>
     </div>
 
-    <% if(blogs.length > 0) { %> <% blogs.forEach(blog => { %>
-
-    <h3 class="title"><%= blog.title %></h3>
-    <p>
-      <%= blog.body %>
-    </p>
-
-    <% }) %> <% } %>
   </body>
 </html>
